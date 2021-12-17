@@ -1,0 +1,162 @@
+/*!
+ * @author Mohamed Muntasir
+ * @link https://github.com/devmotheg
+ */
+
+/* General */
+
+@import url("https://fonts.googleapis.com/css?family=Raleway|PT+Serif:700");
+
+:root {
+  --main-font-color: #1a1a1a;
+  --main-bg-color: white;
+  --main-theme-color: rgb(243, 168, 47);
+  --light-white: #f5f5f5;
+  --light-grey: #bbb;
+  --light-black: #282a39;
+  --container-width: 768px;
+  --font-body-stack: Raleway, Charcoal, sans-serif;
+  --font-heading-stack: "PT Serif", sans-serif;
+  --transition-duration: 0.3s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--main-font-color);
+  font-family: var(--font-body-stack);
+  min-width: 400px;
+}
+
+/* Container */
+
+.container {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 2.8rem;
+}
+
+/* Header */
+
+.app__question-box {
+  text-align: center;
+}
+
+.app__question {
+  font-family: var(--font-heading-stack);
+  font-weight: bold;
+  letter-spacing: calc(1.1rem / 16);
+  padding: 0.8rem 4rem;
+}
+
+.app__tracker {
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.progress {
+  width: 50%;
+  background: var(--light-white);
+  margin: 2rem auto;
+}
+
+.progress__inner {
+  width: 0;
+  height: calc(10rem / 16);
+  background: var(--main-theme-color);
+  border-right: var(--light-black) calc(2rem / 16) solid;
+}
+
+.app__tagline {
+  font-size: 1.4rem;
+  color: var(--light-grey);
+}
+
+/* Body */
+
+.app__choices {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 2rem;
+  margin: 1rem auto;
+  gap: 0.6rem;
+}
+
+.app__choice {
+  width: 49%;
+  background: var(--light-white);
+  margin: auto;
+  letter-spacing: calc(1.1rem / 16);
+}
+
+.app__label {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.app__input {
+  display: none;
+}
+
+.app__input,
+.app__label {
+  cursor: pointer;
+}
+
+.app__choice span {
+  transition: var(--transition-duration) all ease;
+}
+
+.app__choice input:checked + label {
+  color: var(--main-theme-color);
+}
+
+.app__choice input:checked + label i {
+  background-image: url("../images/circle-filled.svg");
+}
+
+.app__choices label i {
+  background: url("../images/circle-outline.svg");
+  background-size: calc(35rem / 16);
+  background-repeat: no-repeat;
+  width: calc(35rem / 16);
+  height: calc(35rem / 16);
+  display: inline-block;
+  margin-right: calc(10rem / 16);
+  transition: var(--transition-duration) all ease;
+  padding: 1.2rem;
+}
+
+/* Footer */
+
+.app__buttons-box {
+  display: grid;
+  padding: 2rem;
+}
+
+.button:first-of-type {
+  border-bottom: 0;
+}
+
+.button {
+  padding: 1rem 3.8rem;
+  text-transform: uppercase;
+  border: calc(1rem / 16) solid var(--light-black);
+  outline: 0;
+  transition: var(--transition-duration) all ease;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.button:hover {
+  background: var(--light-black);
+  color: white;
+  cursor: pointer;
+}

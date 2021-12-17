@@ -1,0 +1,45 @@
+<!--!
+  @author Mohamed Muntasir
+  @link https://github.com/devmotheg
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Quiz App</title>
+</head>
+
+<body>
+  <!-- Main -->
+  <main class="app">
+    <!-- Container -->
+    <div class="container">
+      <!-- Header -->
+      <div class="app__question-box">
+        <h1 class="app__question"></h1>
+        <p class="app__tracker"></p>
+        <div class="progress">
+          <div class="progress__inner"></div>
+        </div>
+        <p class="app__tagline">Pick an option below!</p>
+      </div>
+      <!-- Body -->
+      <div class="app__choices-box">
+        <ul class="app__choices"></ul>
+      </div>
+      <!-- Footer -->
+      <div class="app__buttons-box">
+        <button class="button next">Next</button>
+        <button class="button restart">Restart</button>
+      </div>
+    </div>
+  </main>
+  <script src="js/app.js" type="module"></script>
+</body>
+
+</html>
